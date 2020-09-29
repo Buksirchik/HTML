@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chess</title>
+  <style>
+    body {
+      background-color: cyan;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .chess {
+      margin: auto;
+      border-collapse: collapse;
+      background-color: white;
+      border: 2px solid black;
+    }
+
+    .chess td {
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .chess .black-cell {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .rook-black {
+      background: url("./img/chess.png") 192px 97px;
+    }
+
+    .horse-black {
+      background: url("./img/chess.png") 96px 97px;
+    }
+
+    .elephant-black {
+      background: url("./img/chess.png") 144px 97px;
+    }
+
+    .queen-black {
+      background: url("./img/chess.png") 241px 97px;
+    }
+
+    .king-black {
+      background: url("./img/chess.png") 289px 97px;
+    }
+
+    .pawn-black {
+      background: url("./img/chess.png") 49px 97px;
+    }
+
+    .rook-white {
+      background: url("./img/chess.png") 192px 49px;
+    }
+
+    .horse-white {
+      background: url("./img/chess.png") 96px 49px;
+    }
+
+    .elephant-white {
+      background: url("./img/chess.png") 144px 49px;
+    }
+
+    .queen-white {
+      background: url("./img/chess.png") 241px 49px;
+    }
+
+    .king-white {
+      background: url("./img/chess.png") 289px 49px;
+    }
+
+    .pawn-white {
+      background: url("./img/chess.png") 49px 49px;
+    }
+
+    .chess .v-numeration {
+      width: 30px;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+    }
+    .chess .h-numeration {
+      height: 25px;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+    .chess .corner-cell {
+      width: 25px;
+      height: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title">Шахматы</h1>
+
+  <table class="chess">
+    <tbody>
+      <tr>
+        <td class="corner-cell"></td>
+        <td class="h-numeration">a</td>
+        <td class="h-numeration">b</td>
+        <td class="h-numeration">c</td>
+        <td class="h-numeration">d</td>
+        <td class="h-numeration">e</td>
+        <td class="h-numeration">f</td>
+        <td class="h-numeration">g</td>
+        <td class="h-numeration">h</td>
+        <td class="corner-cell"></td>
+      </tr>
+      <tr>
+        <td class="v-numeration">8</td>
+        <td class="rook-black"></td>
+        <td class="horse-black black-cell"></td>
+        <td class="elephant-black"></td>
+        <td class="queen-black black-cell"></td>
+        <td class="king-black"></td>
+        <td class="elephant-black black-cell"></td>
+        <td class="horse-black"></td>
+        <td class="rook-black black-cell"></td>
+        <td class="v-numeration">8</td>
+      </tr>
+      <tr>
+        <td class="v-numeration">7</td>
+        <td class="pawn-black black-cell"></td>
+        <td class="pawn-black"></td>
+        <td class="pawn-black black-cell"></td>
+        <td class="pawn-black"></td>
+        <td class="pawn-black black-cell"></td>
+        <td class="pawn-black"></td>
+        <td class="pawn-black black-cell"></td>
+        <td class="pawn-black"></td>
+        <td class="v-numeration">7</td>
+      </tr>
+      <tr>
+        <td class="v-numeration">6</td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td class="v-numeration">6</td>
+      </tr>
+      <tr>
+        <td class="v-numeration">5</td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="v-numeration">5</td>
+      </tr>
+      <tr>
+        <td class="v-numeration">4</td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td class="v-numeration">4</td>
+      </tr>
+      <tr>
+        <td class="v-numeration">3</td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="black-cell"></td>
+        <td></td>
+        <td class="v-numeration">3</td>
+      </tr>
+      <tr>
+        <td class="v-numeration">2</td>
+        <td class="pawn-white"></td>
+        <td class="pawn-white black-cell"></td>
+        <td class="pawn-white"></td>
+        <td class="pawn-white black-cell"></td>
+        <td class="pawn-white"></td>
+        <td class="pawn-white black-cell"></td>
+        <td class="pawn-white"></td>
+        <td class="pawn-white black-cell"></td>
+        <td class="v-numeration">2</td>
+      </tr>
+      <tr>
+        <td class="v-numeration">1</td>
+        <td class="rook-white black-cell"></td>
+        <td class="horse-white"></td>
+        <td class="elephant-white black-cell"></td>
+        <td class="queen-white"></td>
+        <td class="king-white black-cell"></td>
+        <td class="elephant-white"></td>
+        <td class="horse-white black-cell"></td>
+        <td class="rook-white"></td>
+        <td class="v-numeration">1</td>
+      </tr>
+      <tr>
+        <td class="corner-cell"></td>
+        <td class="h-numeration">a</td>
+        <td class="h-numeration">b</td>
+        <td class="h-numeration">c</td>
+        <td class="h-numeration">d</td>
+        <td class="h-numeration">e</td>
+        <td class="h-numeration">f</td>
+        <td class="h-numeration">g</td>
+        <td class="h-numeration">h</td>
+        <td class="corner-cell"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
