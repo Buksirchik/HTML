@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table-test-2</title>
+  <style>
+    /* таблица 1 */
+    .table-1 {
+      border-collapse: collapse;
+      width: 100%;
+      border: 3px blue solid;
+    }
+
+    thead {
+      background: #888888;
+      color: #ffffff;
+    }
+
+    .table-1 th,
+    td {
+      padding: 5px;
+    }
+
+    .table-1 td {
+      border: 3px blue solid;
+    }
+
+    .table-1 .text-center {
+      text-align: center;
+    }
+
+    .table-1 .text-right {
+      text-align: right;
+    }
+
+    /* таблица 2 */
+    .table-2,
+    .table-3,
+    .table-4 {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    .table-2 td,
+    .table-3 td,
+    .table-4 td {
+      width: 22px;
+      height: 22px;
+    }
+
+    .table-2 td {
+      width: 30px;
+      height: 30px;
+    }
+
+    .table-2 .red-cell {
+      background-color: #ff0000;
+    }
+
+    .table-2 .green-cell {
+      background-color: #66ff00;
+    }
+
+    /* таблица 3 */
+
+    .table-3 .pink-cell {
+      background-color: #ff0099;
+    }
+
+    .table-3 .purple-cell {
+      background-color: #ff99ff;
+    }
+
+    .table-3 .pale-pink-cell {
+      background-color: #ff66cc;
+    }
+
+    .table-3 .beige-cell {
+      background-color: #ffcccc;
+    }
+
+    .dark-green-cell {
+      background-color: #339933;
+    }
+
+    .pale-green-cell {
+      background-color: #33cc66;
+    }
+
+    .table-3 .green-cell {
+      background-color: #33cc33;
+    }
+
+    .table-3 .light-green-cell {
+      background-color: #00ff00;
+    }
+
+    .table-4 td {
+      width: 27px;
+      height: 31px;
+    }
+
+    .table-4 tr {
+      background-color: black;
+    }
+
+    .table-4 .dark-green-cell {
+      background-color: #339966;
+    }
+
+    .table-4 .green-cell {
+      background-color: #009900;
+    }
+
+    .table-4 .light-green-cell {
+      background-color: #33cc33;
+    }
+
+    .table-4 .brown-cell {
+      background-color: #993300;
+    }
+
+    .table-4 .light-brown-cell {
+      background-color: #cc9900;
+    }
+  </style>
+</head>
+
+<body>
+  <table class="table-1">
+    <thead>
+      <tr>
+        <th>Название 1</th>
+        <th>Название 2</th>
+        <th>Ещё название</th>
+        <th>Куча элементов</th>
+        <th>Спсиок1</th>
+        <th>Список2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="11" class="text-center">JPMC</td>
+        <td rowspan="5">CST</td>
+        <td rowspan="3">CT</td>
+        <td>ADS</td>
+        <td class="text-center">1</td>
+        <td class="text-center">10</td>
+      </tr>
+      <tr>
+        <td>BTO</td>
+        <td class="text-center">2</td>
+        <td class="text-center">15</td>
+      </tr>
+      <tr>
+        <td>CSI</td>
+        <td class="text-center">3</td>
+        <td class="text-center">16</td>
+      </tr>
+      <tr>
+        <td class="text-center" rowspan="2">VCT</td>
+        <td>ADS</td>
+        <td class="text-center">4</td>
+        <td class="text-center" border: 3px blue solid;>10</td>
+      </tr>
+      <tr>
+        <td>BTO</td>
+        <td class="text-center">5</td>
+        <td class="text-center">15</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="text-right">Sub Total</td>
+        <td class="text-center">6</td>
+        <td class="text-center">15</td>
+      </tr>
+      <tr>
+        <td rowspan="4">CST</td>
+        <td rowspan="3">CT</td>
+        <td>ADS</td>
+        <td class="text-center">7</td>
+        <td class="text-center">10</td>
+      </tr>
+      <tr>
+        <td>BTO</td>
+        <td class="text-center">8</td>
+        <td class="text-center">15</td>
+      </tr>
+      <tr>
+        <td>CSI</td>
+        <td class="text-center">9</td>
+        <td class="text-center">16</td>
+      </tr>
+      <tr>
+        <td class="text-center">VCT</td>
+        <td>ADS</td>
+        <td class="text-center">10</td>
+        <td class="text-center">10</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="text-right">Sub Total</td>
+        <td class="text-center">11</td>
+        <td class="text-center">15</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table-2">
+    <tbody>
+      <tr>
+        <td class="red-cell"></td>
+        <td></td>
+        <td class="red-cell"></td>
+        <td class="green-cell"></td>
+        <td class="red-cell"></td>
+        <td></td>
+        <td class="red-cell"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="red-cell"></td>
+        <td class="green-cell"></td>
+        <td></td>
+        <td class="green-cell"></td>
+        <td class="red-cell"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="red-cell"></td>
+        <td class="green-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="green-cell"></td>
+        <td class="red-cell"></td>
+      </tr>
+      <tr>
+        <td class="green-cell"></td>
+        <td></td>
+        <td></td>
+        <td class="red-cell"></td>
+        <td></td>
+        <td></td>
+        <td class="green-cell"></td>
+      </tr>
+      <tr>
+        <td class="red-cell"></td>
+        <td class="green-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="green-cell"></td>
+        <td class="red-cell"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="red-cell"></td>
+        <td class="green-cell"></td>
+        <td></td>
+        <td class="green-cell"></td>
+        <td class="red-cell"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="red-cell"></td>
+        <td></td>
+        <td class="red-cell"></td>
+        <td class="green-cell"></td>
+        <td class="red-cell"></td>
+        <td></td>
+        <td class="red-cell"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table-3">
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="dark-green-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="dark-green-cell"></td>
+        <td class="pale-green-cell"></td>
+        <td class="dark-green-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pale-pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="dark-green-cell"></td>
+        <td class="pale-green-cell"></td>
+        <td class="green-cell"></td>
+        <td class="pale-green-cell"></td>
+        <td class="dark-green-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pale-pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pale-pink-cell"></td>
+        <td class="beige-cell"></td>
+        <td class="pale-pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td class="dark-green-cell"></td>
+        <td class="pale-green-cell"></td>
+        <td class="green-cell"></td>
+        <td class="light-green-cell"></td>
+        <td class="green-cell"></td>
+        <td class="pale-green-cell"></td>
+        <td class="dark-green-cell"></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pale-pink-cell"></td>
+        <td class="beige-cell"></td>
+        <td class="pale-pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pale-pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="dark-green-cell"></td>
+        <td class="pale-green-cell"></td>
+        <td class="green-cell"></td>
+        <td class="pale-green-cell"></td>
+        <td class="dark-green-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pale-pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="dark-green-cell"></td>
+        <td class="pale-green-cell"></td>
+        <td class="dark-green-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td class="purple-cell"></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="dark-green-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="pink-cell"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table-4">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="green-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="green-cell"></td>
+      <td class="green-cell"></td>
+      <td class="green-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="green-cell"></td>
+      <td class="green-cell"></td>
+      <td class="green-cell"></td>
+      <td class="green-cell"></td>
+      <td class="green-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td class="dark-green-cell"></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td class="pale-green-cell"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+      <td class="light-green-cell"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="brown-cell"></td>
+      <td class="light-brown-cell"></td>
+      <td class="brown-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="brown-cell"></td>
+      <td class="light-brown-cell"></td>
+      <td class="brown-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="brown-cell"></td>
+      <td class="light-brown-cell"></td>
+      <td class="brown-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="brown-cell"></td>
+      <td class="light-brown-cell"></td>
+      <td class="brown-cell"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+
+</html>
