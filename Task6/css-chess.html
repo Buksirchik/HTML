@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>css-chess</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    table td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid gray;
+    }
+
+    table tr:first-child td,
+    table tr:last-child td {
+      background-color: chartreuse;
+      height: 20px;
+    }
+
+    tr td:first-child,
+    tr td:last-child {
+      background-color: chartreuse;
+      width: 20px;
+    }
+
+    tr:first-child+tr td:nth-child(odd) {
+      background-color: black;
+    }
+
+    tr:first-child+tr+tr td:nth-child(even) {
+      background-color: black;
+    }
+
+    tr:first-child+tr+tr+tr td:nth-child(odd) {
+      background-color: black;
+    }
+
+    tr:first-child+tr+tr+tr+tr td:nth-child(even) {
+      background-color: black;
+    }
+
+    tr:first-child+tr+tr+tr+tr+tr td:nth-child(odd) {
+      background-color: black;
+    }
+
+    tr:first-child+tr+tr+tr+tr+tr+tr td:nth-child(even) {
+      background-color: black;
+    }
+
+    tr:first-child+tr+tr+tr+tr+tr+tr+tr td:nth-child(odd) {
+      background-color: black;
+    }
+
+    tr:first-child+tr+tr+tr+tr+tr+tr+tr+tr td:nth-child(even) {
+      background-color: black;
+    }
+
+    table tr:first-child+tr td:first-child {
+      background-color: chartreuse;
+    }
+
+    table tr:first-child+tr+tr td:last-child {
+      background-color: chartreuse;
+    }
+
+    table tr:first-child+tr+tr+tr td:first-child {
+      background-color: chartreuse;
+    }
+
+    table tr:first-child+tr+tr+tr+tr td:last-child {
+      background-color: chartreuse;
+    }
+
+    table tr:first-child+tr+tr+tr+tr+tr td:first-child {
+      background-color: chartreuse;
+    }
+
+    table tr:first-child+tr+tr+tr+tr+tr+tr td:last-child {
+      background-color: chartreuse;
+    }
+
+    table tr:first-child+tr+tr+tr+tr+tr+tr+tr td:first-child {
+      background-color: chartreuse;
+    }
+
+    table tr:first-child+tr+tr+tr+tr+tr+tr+tr+tr td:last-child {
+      background-color: chartreuse;
+    }
+  </style>
+</head>
+
+<body>
+  <table class="chess">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
