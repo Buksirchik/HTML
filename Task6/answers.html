@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>answers</title>
+  <style>
+    body {
+      background-color: #cccccc;
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans';
+    }
+
+    .post-message-wrap {
+      margin: 20px;
+    }
+
+    .post-message__avatar {
+      width: 50px;
+      height: 50px;
+      float: left;
+      box-shadow: 0 0 0 4px white, 0 0 0 5px grey;
+      margin: 6px 6px;
+    }
+
+    .post-message {
+      color: #9a9a9a;
+      width: 600px;
+      position: relative;
+    }
+
+    .post-message__join-line {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 514px;
+      background-color: #9a9a9a;
+      left: 29px;
+      top: 60px;
+    }
+
+    .post-message__text-block {
+      margin-left: 65px;
+    }
+
+    .post-message__message {
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: 1px solid gray;
+    }
+
+    .post-message__reply .post-message {
+      margin-top: 15px;
+      width: auto;
+    }
+
+    .post-message__reply .post-message::before {
+      position: absolute;
+      content: '';
+      left: -8px;
+      border: 8px solid;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      top: 25px;
+    }
+
+    .post-message__reply .post-message::after {
+      position: absolute;
+      content: '';
+      left: -35px;
+      width: 35px;
+      height: 1px;
+      background-color: #9a9a9a;
+      top: 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="post-message-wrap">
+    <div class="post-message">
+      <img class="post-message__avatar" src="./img/avatar-1.png" alt="">
+      <div class="post-message__text-block">
+        <div class="post-message__join-line"></div>
+        <div class="post-message__message">
+          <p class="post-message__title">
+            <b>User123</b> спрашивает:
+          </p>
+          <p class="post-message__text">Что такое Git и зачем его использовать?</p>
+        </div>
+        <div class="post-message__reply">
+          <div class="post-message">
+            <img class="post-message__avatar" src="./img/avatar-1.png" alt="">
+            <div class="post-message__text-block">
+              <div class="post-message__message">
+                <p class="post-message__title">
+                  <b>User4563</b> отвечает:
+                </p>
+                <p class="post-message__text">
+                  Git — это система управления версиями. У Git две основных задачи: первая — хранить информацию о всех
+                  изменениях в вашем коде, начиная с самой первой строчки, а вторая — обеспечение удобства командной
+                  работы над кодом.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-message">
+            <img class="post-message__avatar" src="./img/avatar-1.png" alt="">
+            <div class="post-message__text-block">
+              <div class="post-message__message">
+                <p class="post-message__title">
+                  <b>User4563</b> отвечает:
+                </p>
+                <p class="post-message__text">
+                  Репозиторий Git — это место, где хранится ваш код и вся информация о его изменениях. Репозитории могут
+                  находиться у вас на компьютере, на компьютерах ваших коллег и на удалённом сервере.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-message">
+            <img class="post-message__avatar" src="./img/avatar-1.png" alt="">
+            <div class="post-message__text-block">
+              <div class="post-message__message">
+                <p class="post-message__title">
+                  <b>User4563</b> отвечает:
+                </p>
+                <p class="post-message__text">
+                  В 2005 году, Линус Торвальдс (человек, известный тем, что стоял за созданием ядра <i>Linux OS</i>)
+                  разработал
+                  GIT для управления версиями ядра <i>Linux</i>, однако, чуть позднее его поддержкой занялся другой
+                  человек,
+                  японский инженер-программист — Джунио Хамано. На сегодняшний день, GIT — это одна из самых известных
+                  систем контроля версий с открытым исходным кодом, на которую полагаются миллионы проектов по всем миру
+                  (включая как коммерческие, так и бесплатные проекты). GIT — это полностью бесплатное программное
+                  обеспечение, поддерживающее множество ОС, таких как <i>Mac</i>, <i>Linux</i>, <i>Windows</i> и
+                  <i>Solaris</i>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
