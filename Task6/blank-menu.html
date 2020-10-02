@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blank-menu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #666666;
+      font-family: 'Open Sans';
+    }
+
+    ul {
+      list-style: none;
+      background-color: #333333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .nav__item {
+      display: inline-block;
+      position: relative;
+    }
+
+    .nav__item:hover {
+      background-color: #336699;
+    }
+
+    .nav__item-link {
+      color: white;
+      position: relative;
+      display: block;
+      padding: 10px 20px 10px 40px;
+    }
+
+    .nav__item-link::before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url(./img/sprite.png);
+      left: 10px;
+    }
+
+    .nav__item:nth-child(1) .nav__item-link::before {
+      background-position: 72px 0px;
+    }
+
+    .nav__item:nth-child(2) .nav__item-link::before {
+      background-position: 48px 0px;
+    }
+
+    .nav__item:nth-child(3) .nav__item-link::before {
+      background-position: 24px 0px;
+    }
+
+    .nav__item:nth-child(4) .nav__item-link::before {
+      background-position: 72px 24px;
+    }
+
+    .nav__item:nth-child(5) .nav__item-link::before {
+      background-position: 48px 24px;
+    }
+
+    .nav__submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: max-content;
+    }
+
+    .nav__submenu-item {
+      background-color: white;
+      position: relative;
+    }
+
+    .nav__submenu-item:hover::before {
+      content: '';
+      width: 5px;
+      height: 100%;
+      background-color: #336699;
+      position: absolute;
+    }
+
+    .nav__submenu-item:hover {
+      background-color: #cccccc;
+    }
+
+    .nav__item:hover .nav__submenu-item .nav__submenu {
+      display: none;
+      left: 100%;
+      top: 0;
+    }
+
+    .nav__submenu-link {
+      display: block;
+      padding: 10px 25px;
+      color: gray;
+      font-weight: bold;
+      position: relative;
+    }
+
+    /* выпадение меню (1ый уровень) */
+    .nav__item:hover .nav__submenu {
+      display: block;
+    }
+
+    /* выпадение подменю */
+    .nav__item:hover .nav__submenu-item:hover .nav__submenu {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Много-уровненове горизонтальное меню</h1>
+  <ul class="nav">
+    <li class="nav__item">
+      <a href="#main" class="nav__item-link">Главная</a>
+      <ul class="nav__submenu">
+        <li class="nav__submenu-item">
+          <a href="#submenu" class="nav__submenu-link">Подменю-1</a>
+        </li>
+        <li class="nav__submenu-item">
+          <a href="#submenu" class="nav__submenu-link">Подменю-2</a>
+        </li>
+        <li class="nav__submenu-item">
+          <a href="#submenu" class="nav__submenu-link">Подменю-3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav__item">
+      <a href="#about" class="nav__item-link">О нас</a>
+    </li>
+    <li class="nav__item">
+      <a href="#portfolio" class="nav__item-link">Портфолио</a>
+      <ul class="nav__submenu">
+        <li class="nav__submenu-item">
+          <a href="#submenu" class="nav__submenu-link">Подменю-1</a>
+        </li>
+        <li class="nav__submenu-item">
+          <a href="#submenu" class="nav__submenu-link">Уровень 3 меню</a>
+          <ul class="nav__submenu">
+            <li class="nav__submenu-item">
+              <a href="#submenu" class="nav__submenu-link">Подменю-4</a>
+            </li>
+            <li class="nav__submenu-item">
+              <a href="#submenu" class="nav__submenu-link">Подменю-5</a>
+            </li>
+            <li class="nav__submenu-item">
+              <a href="#submenu" class="nav__submenu-link">Подменю-6</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="nav__item">
+      <a href="#blog" class="nav__item-link">Блог</a>
+    </li>
+    <li class="nav__item">
+      <a href="#contacts" class="nav__item-link">Контакты</a>
+    </li>
+  </ul>
+</body>
+
+</html>
