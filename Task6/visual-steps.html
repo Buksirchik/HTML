@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>visual-steps</title>
+  <style>
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+      border: 3px solid #cccccc;
+      border-radius: 50%;
+      padding: 10px 15px;
+      margin: 0 10px;
+      position: relative;
+      color: white;
+      background-color: yellowgreen;
+    }
+
+    .steps-1 li::after {
+      content: '';
+      width: 30px;
+      height: 3px;
+      background-color: #cccccc;
+      position: absolute;
+      left: 100%;
+      top: 50%;
+    }
+
+    .steps-1 li:nth-child(4) {
+      background-color: plum;
+    }
+
+    .steps-1 li:last-child {
+      background-color: #cccccc;
+      color: black;
+    }
+
+    .steps-1 li:last-child:after {
+      display: none;
+    }
+
+    .steps-2 li{
+      box-shadow: 10px 10px 0 #cccccc;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="steps-1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+
+</body>
+
+</html>
