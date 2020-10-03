@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>adapt-fotos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .title {
+      margin: 0;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+
+    .gallery {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .gallery__item {
+      width: calc(100%/3);
+      padding: 10px;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+
+    .gallery__item-img {
+      display: block;
+      width: 100%;
+
+    }
+
+    /* media query */
+
+    @media (max-width: 768px) {
+      .gallery__item {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery__item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title">Адаптивная вёрстка галереи</h1>
+  <div class="gallery">
+    <div class="gallery__item">
+      <img class="gallery__item-img" src="./img/photo-1.jpg" alt="кот">
+    </div>
+    <div class="gallery__item">
+      <img class="gallery__item-img" src="./img/photo-2.jpg" alt="кот">
+    </div>
+    <div class="gallery__item">
+      <img class="gallery__item-img" src="./img/photo-3.jpg" alt="кот">
+    </div>
+    <div class="gallery__item">
+      <img class="gallery__item-img" src="./img/photo-4.jpg" alt="кот">
+    </div>
+    <div class="gallery__item">
+      <img class="gallery__item-img" src="./img/photo-5.jpg" alt="кот">
+    </div>
+    <div class="gallery__item">
+      <img class="gallery__item-img" src="./img/photo-6.jpg" alt="кот">
+    </div>
+    <div class="gallery__item">
+      <img class="gallery__item-img" src="./img/photo-7.jpg" alt="кот">
+    </div>
+    <div class="gallery__item">
+      <img class="gallery__item-img" src="./img/photo-8.jpg" alt="кот">
+    </div>
+    <div class="gallery__item">
+      <img class="gallery__item-img" src="./img/photo-9.jpg" alt="кот">
+    </div>
+  </div>
+</body>
+
+</html>
