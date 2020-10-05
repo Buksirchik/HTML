@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>news-section</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: cyan;
+    }
+
+    h1,
+    p {
+      margin: 0;
+    }
+
+    .news {
+      max-width: 960px;
+      min-width: 320px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 20px 15px;
+      box-sizing: border-box;
+    }
+
+    .news-block {
+      clear: both;
+    }
+
+    .news-block::after {
+      content: " ";
+      display: block;
+      clear: both;
+    }
+
+    .news__title {
+      float: left;
+      font-weight: 400;
+    }
+
+    .news-archive {
+      margin-top: 15px;
+      float: right;
+    }
+
+    .news-block__item {
+      width: 33.333%;
+      min-width: 300px;
+      float: left;
+      margin: 10px 0;
+    }
+
+    .news-block__item-img {
+      width: 60px;
+      height: 60px;
+      float: left;
+      margin-right: 15px;
+    }
+
+    .news-block__item-date {
+      margin: 10px 0;
+    }
+    .news-block__item-link {
+      margin-left: 75px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="news">
+    <h1 class="news__title">Новости</h1>
+    <a class="news-archive" href="">Показать весь архив</a>
+    <div class="news-block">
+      <div class="news-block__item">
+        <img class="news-block__item-img" src="./img/news-1.png">
+        <p class="news-block__item-date">31 ноября 2014</p>
+        <p class="news-block__item-link">
+          <a href="#">Важная информация</a>
+        </p>
+      </div>
+      <div class="news-block__item">
+        <img class="news-block__item-img" src="./img/news-2.png">
+        <p class="news-block__item-date">20 ноября 2014</p>
+        <p class="news-block__item-link">
+          <a href="#">Выставка кошек</a>
+        </p>
+      </div>
+      <div class="news-block__item">
+        <img class="news-block__item-img" src="./img/news-3.png">
+        <p class="news-block__item-date">15 ноября 2014</p>
+        <p class="news-block__item-link">
+          <a href="#">Афиша кино</a>
+        </p>
+      </div>
+      <div class="news-block__item">
+        <img class="news-block__item-img" src="./img/news-4.png">
+        <p class="news-block__item-date">10 ноября 2014</p>
+        <p class="news-block__item-link">
+          <a href="#">Спортивные мероприятия</a>
+        </p>
+      </div>
+      <div class="news-block__item">
+        <img class="news-block__item-img" src="./img/news-5.png">
+        <p class="news-block__item-date">2 ноября 2014</p>
+        <p class="news-block__item-link">
+          <a href="#">Результаты голосования</a>
+        </p>
+      </div>
+      <div class="news-block__item">
+        <img class="news-block__item-img" src="./img/news-6.png">
+        <p class="news-block__item-date">1 ноября 2014</p>
+        <p class="news-block__item-link">
+          <a href="#">Собрание ООН</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
