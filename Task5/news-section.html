@@ -29,6 +29,7 @@
     .news-block {
       clear: both;
     }
+
     .news-block::after {
       content: " ";
       display: block;
@@ -46,23 +47,30 @@
     }
 
     .news-block__item {
+      width: 33.333%;
       min-width: 300px;
       float: left;
       margin: 10px 0;
     }
+
     .news-block__item-img {
       width: 60px;
       height: 60px;
       float: left;
       margin-right: 15px;
     }
+
     .news-block__item-date {
       margin: 10px 0;
+    }
+    .news-block__item-link {
+      margin-left: 75px;
     }
   </style>
 </head>
 
 <body>
+
   <div class="news">
     <h1 class="news__title">Новости</h1>
     <a class="news-archive" href="">Показать весь архив</a>
@@ -70,42 +78,42 @@
       <div class="news-block__item">
         <img class="news-block__item-img" src="./img/news-1.png">
         <p class="news-block__item-date">31 ноября 2014</p>
-        <p>
+        <p class="news-block__item-link">
           <a href="#">Важная информация</a>
         </p>
       </div>
       <div class="news-block__item">
         <img class="news-block__item-img" src="./img/news-2.png">
         <p class="news-block__item-date">20 ноября 2014</p>
-        <p>
+        <p class="news-block__item-link">
           <a href="#">Выставка кошек</a>
         </p>
       </div>
       <div class="news-block__item">
         <img class="news-block__item-img" src="./img/news-3.png">
         <p class="news-block__item-date">15 ноября 2014</p>
-        <p>
+        <p class="news-block__item-link">
           <a href="#">Афиша кино</a>
         </p>
       </div>
       <div class="news-block__item">
         <img class="news-block__item-img" src="./img/news-4.png">
         <p class="news-block__item-date">10 ноября 2014</p>
-        <p>
+        <p class="news-block__item-link">
           <a href="#">Спортивные мероприятия</a>
         </p>
       </div>
       <div class="news-block__item">
         <img class="news-block__item-img" src="./img/news-5.png">
         <p class="news-block__item-date">2 ноября 2014</p>
-        <p>
+        <p class="news-block__item-link">
           <a href="#">Результаты голосования</a>
         </p>
       </div>
       <div class="news-block__item">
         <img class="news-block__item-img" src="./img/news-6.png">
         <p class="news-block__item-date">1 ноября 2014</p>
-        <p>
+        <p class="news-block__item-link">
           <a href="#">Собрание ООН</a>
         </p>
       </div>
