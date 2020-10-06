@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <title>form-styled</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #d2cece;
+      font-family: 'Manrope';
+    }
+
+    .form {
+      width: 800px;
+      background-color: white;
+      margin: 25px auto;
+      border: 1px solid #3fafff;
+      border-radius: 5px;
+    }
+
+    .form-item-wrap {
+      margin: 0 25px;
+    }
+
+    .form-title-wrap {
+      padding: 20px 0;
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+      background-color: #3fafff;
+    }
+
+    .form__title {
+      display: inline;
+      position: relative;
+      margin: 0;
+    }
+
+    .form__title::before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 24px;
+      background-image: url(./img/sprite.png);
+      background-position: 46px 24px;
+      left: -29px;
+      top: 7px;
+    }
+
+    .form__item-label {
+      display: block;
+      font-size: 0.9rem;
+      color: #4c4c4c;
+      font-weight: 700;
+      margin: 15px 0 5px;
+      padding: 0 10px;
+    }
+
+    .form__item-input {
+      display: block;
+      width: 400px;
+      padding: 7px 5px 7px 40px;
+      border: 1px solid #4c4c4c;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .input-name-wrap,
+    .input-email-wrap,
+    .input-tel-wrap {
+      position: relative;
+    }
+
+    .input-name-wrap::before,
+    .input-email-wrap::before,
+    .input-tel-wrap::before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 24px;
+      background-image: url(./img/sprite.png);
+      background-position: -2px 0;
+      left: 5px;
+      top: 3px;
+    }
+
+    .input-email-wrap::before {
+      background-position: -2px 24px;
+    }
+
+    .input-tel-wrap::before {
+      background-position: 22px 0;
+    }
+
+    .form__item-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #3fafff;
+      border-color: transparent;
+    }
+
+    .textarea-wrap {
+      position: relative;
+    }
+
+    .textarea-wrap::before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 24px;
+      background-image: url(./img/sprite.png);
+      background-position: 46px 0;
+      left: 5px;
+      top: 3px;
+    }
+
+    .form__item-textarea {
+      width: 100%;
+      height: 150px;
+      border: 1px solid #4c4c4c;
+      border-radius: 5px;
+      padding: 7px 7px 7px 40px;
+      box-sizing: border-box;
+    }
+
+    .form__item-textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #3fafff;
+      border-color: transparent;
+    }
+
+    .form__item-button {
+      display: block;
+      background-color: #3fafff;
+      margin: 15px auto;
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+    }
+
+    /* modification */
+    .modification .form__item-label {
+      width: 150px;
+      display: inline-block;
+    }
+
+    .modification .input-name-wrap {
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    .modification .input-tel-wrap {
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    .modification .input-email-wrap {
+      display: inline-block;
+      margin-right: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Для модификации формы, элементу form нужно добавить класс modification: 
+    <form class="form modification"> -->
+
+  <form class="form" action="#">
+    <div class="form-title-wrap">
+      <h3 class="form__title">Обратная связь</h3>
+    </div>
+
+    <div class="form-item-wrap">
+      <label class="form__item-label" for="name">Имя:</label>
+      <div class="input-name-wrap">
+        <input class="form__item-input" type="text" id="name" name="name" placeholder="Введите Ваше имя">
+      </div>
+
+      <label class="form__item-label" for="email">Ваш email:</label>
+      <div class="input-email-wrap">
+        <input class="form__item-input" type="email" id="email" name="email" placeholder="Введите адрес Вашей почты">
+      </div>
+
+      <label class="form__item-label" for="tel">Ваш телефон:</label>
+      <div class="input-tel-wrap">
+        <input class="form__item-input" type="tel" id="tel" name="tel" placeholder="Введите номер телефона">
+      </div>
+
+      <label class="form__item-label" for="message">Сообщение:</label>
+      <div class="textarea-wrap">
+        <textarea class="form__item-textarea" id="message" name="message" placeholder="Текст сообщения..."></textarea>
+      </div>
+
+      <button class="form__item-button" type="submit">Отправить</button>
+    </div>
+  </form>
+</body>
+
+</html>
