@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>knowledges</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    p:not(:first-child) {
+      margin: 0;
+    }
+
+    section {
+      width: 50%;
+      margin: 30px auto;
+      background-color: white;
+      padding: 40px 25px;
+    }
+
+    div {
+      position: relative;
+      border-radius: 10px;
+      height: 20px;
+      background-color: #e4e4e4;
+      box-shadow: inset 1px 1px 0 0 #cccccc;
+      margin-bottom: 20px;
+    }
+
+    div::before {
+      position: absolute;
+      content: "";
+      border-radius: 10px;
+      top: 1px;
+      left: 1px;
+      height: 18px;
+      width: 0;
+    }
+    .html-bar::before {
+      animation: html 1.5s linear forwards;
+      background-color: orange;
+    }
+    .css-bar::before {
+      animation: css 1.5s linear forwards;
+      background-color: purple;
+    }
+    .js-bar::before {
+      animation: js 1.5s linear forwards;
+      background-color: red;
+    }
+    .jq-bar::before {
+      animation: jq 1.5s linear forwards;
+      background-color: green;
+    }
+    @keyframes html {
+      100% {
+        width: 75%;
+      }
+    }
+    @keyframes css {
+      100% {
+        width: 65%;
+      }
+    }
+    @keyframes js {
+      100% {
+        width: 55%;
+      }
+    }
+    @keyframes jq {
+      100% {
+        width: 45%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <p>Мои знания:</p>
+    <p>HTML</p>
+    <div class="html-bar"></div>
+    <p>CSS</p>
+    <div class="css-bar"></div>
+    <p>JavaScript</p>
+    <div class="js-bar"></div>
+    <p>jQuery</p>
+    <div class="jq-bar"></div>
+  </section>
+</body>
+
+</html>

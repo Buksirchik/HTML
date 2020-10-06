@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animations</title>
+  <style>
+    .container {
+      position: relative;
+      height: 600px;
+      border: 3px solid green;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: purple;
+      animation-name: moveCircle;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+      animation-duration: 3s;
+      animation-direction: alternate;
+    }
+
+
+    .container:hover div{
+      animation-play-state: running;
+    }
+
+    .rotate {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background-color: red;
+      bottom: 50px;
+      left: 50px;
+      animation: rotate 3s ease-in infinite paused alternate;
+    }
+
+    .border-radius {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background-color: orange;
+      bottom: 50px;
+      right: 50px;
+      animation: border-radius 1s ease-out infinite paused alternate;
+    }
+
+    .color {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background-color: #457896;
+      top: 50px;
+      right: 50px;
+      animation: color 1s infinite paused alternate;
+    }
+
+    .scale {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background-color: #457896;
+      top: 50%;
+      right: 50%;
+      animation: scale 4s infinite paused alternate;
+    }
+
+    @keyframes moveCircle {
+      0% {
+        margin-left: 0;
+      }
+
+      30% {
+        margin-left: 100px;
+      }
+
+      60% {
+        margin-left: 200px;
+      }
+
+      100% {
+        margin-left: 300px;
+      }
+    }
+
+    @keyframes rotate {
+      to {
+        left: 200px;
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes border-radius {
+      to {
+        border-radius: 50%;
+      }
+    }
+
+    @keyframes color {
+      to {
+        right: 150px;
+        background-color: #802147;
+      }
+    }
+
+    @keyframes scale {
+      50% {
+        transform: scale(-1, 2);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="circle"></div>
+    <div class="rotate"></div>
+    <div class="border-radius"></div>
+    <div class="color"></div>
+    <div class="scale"></div>
+  </div>
+</body>
+
+</html>
