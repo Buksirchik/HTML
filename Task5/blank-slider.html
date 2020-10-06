@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blank-slider</title>
+  <style>
+    body,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-family: "Open Sans";
+      text-align: center;
+      font-weight: 400;
+    }
+    .slider {
+      width: max-content;
+      position: relative;
+      margin: auto;
+    }
+
+    .slider__btn-prev {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 85%;
+      background: url(./img/slider/prev-next-sprite.png) no-repeat right -29px center;
+    }
+
+    .slider__btn-next {
+      position: absolute;
+      left: 85%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: url(./img/slider/prev-next-sprite.png) no-repeat left -29px center;
+    }
+
+    .slide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Open Sans";
+      color: white;
+      text-align: center;
+    }
+
+    .slide__title {
+      border-top: 3px solid white;
+      border-bottom: 3px solid white;
+      text-transform: uppercase;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .slider-indecator {
+      position: absolute;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      left: 50%;
+      bottom: 10%;
+    }
+    .slider-indecator li {
+      display: inline;
+    }
+    .slider-indecator__item {
+      display: inline-block;
+      text-decoration: none;
+      width: 7px;
+      height: 7px;
+      background: white;
+      margin: 0 3px;
+      transform: translateX(-50%);
+    }
+    .slider .active {
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Вёрстка заготовки для слайдера</h1>
+  <div class="slider">
+    <img src="./img/slider/slider-img-01.jpg" alt="" class="slider__img">
+    <div class="slide">
+      <p class="slide__title">комфортная одежда</p>
+      <p class="slide__subtitle">для всех видов спорта</p>
+    </div>
+    <ul class="slider-indecator">
+      <li>
+        <a class="slider-indecator__item active" href="#"></a>
+      </li>
+      <li>
+        <a class="slider-indecator__item" href="#"></a>
+      </li>
+      <li>
+        <a class="slider-indecator__item" href="#"></a>
+      </li>
+      <li>
+        <a class="slider-indecator__item" href="#"></a>
+      </li>
+    </ul>
+    <a href="#" class="slider__btn-prev"></a>
+    <a href="#" class="slider__btn-next"></a>
+  </div>
+</body>
+
+</html>
