@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>adaptive-layout-flex</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background-color: #00ccff;
+      font-weight: bold;
+    }
+
+    .header__logo {
+      padding: 15px 35px;
+      background-color: gray;
+      color: white;
+    }
+
+    .nav-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .nav-item {
+      padding: 15px 15px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .nav-item:hover {
+      background-color: darkblue;
+    }
+
+    .nav-item-link {
+      color: white;
+      text-decoration: none;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+      width: 15%;
+      background-color: #ffcc00;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .sidebar-right {
+      background-color: #ff66cc;
+    }
+
+    .info {
+      width: 70%;
+      padding: 0 25px 20px;
+      background-color: cyan;
+      font-size: 1.3rem;
+      box-sizing: border-box;
+    }
+
+    .info__list {
+      margin: 0;
+      padding: 0 15px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-weight: bold;
+      background-color: #66ff66;
+    }
+
+    .footer__copyright {
+      padding: 10px;
+    }
+
+    /* media query */
+    @media (max-width: 760px) {
+      .header__logo {
+        margin: auto;
+      }
+
+      .nav {
+        width: 100%;
+      }
+
+      .nav-list {
+        justify-content: space-around;
+      }
+
+      .info {
+        width: 100%;
+        order: 1
+      }
+
+      .sidebar-left {
+        order: 2;
+        width: 50%;
+      }
+
+      .sidebar-right {
+        order: 3;
+        width: 50%;
+      }
+
+      .footer__copyright {
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .nav-item {
+        width: 100%;
+        border-top: 2px solid #01b7e4;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        width: 100%;
+      }
+
+      .footer .nav-item {
+        width: 100%;
+        border-top: 2px solid #99cc99;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">Logo</div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-item-link" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item-link" href="#">О нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item-link" href="#">Продукты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item-link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <aside class="sidebar-left">
+      <p class="sidebar__text">Aside type 1</p>
+    </aside>
+    <article class="info">
+      <h1 class="info__title">Что такое Git</h1>
+      <p class="info__text">
+        Что же такое Git, если говорить коротко? Очень важно понять эту часть материала, потому что если вы поймёте,
+        что такое Git и основы того, как он работает, тогда, возможно, вам будет гораздо проще его использовать. Пока
+        вы изучаете Git, попробуйте забыть всё, что вы знаете о других СКВ, таких как Subversion и Perforce. Это
+        позволит вам избежать определённых проблем при использовании инструмента. Git хранит и использует информацию
+        совсем иначе по сравнению с другими системами, даже несмотря на то, что интерфейс пользователя достаточно
+        похож, и понимание этих различий поможет вам избежать путаницы во время использования.
+        Git — абсолютный лидер по популярности среди современных систем управления версиями. Это развитый проект с
+        активной поддержкой и открытым исходным кодом. Система Git была изначально разработана в 2005 году Линусом
+        Торвальдсом — создателем ядра операционной системы Linux. Git применяется для управления версиями в рамках
+        колоссального количества проектов по разработке ПО, как коммерческих, так и с открытым исходным кодом. Система
+        используется множеством профессиональных разработчиков программного обеспечения. Она превосходно работает под
+        управлением различных операционных систем и может применяться со множеством интегрированных сред разработки
+        (IDE).
+      </p>
+      <p class="info__text">
+        Для чего нужен GIT? При разработке любого ПО проводят тестирования написанного кода. Это необходимо для проверки
+        соответствия фактического результата выполнения набора команд ожидаемому. Может существовать несколько версий
+        определенной части или всего проекта, реализующих различный функционал.
+        Во-первых, это связано с меняющимися требованиями, добавлением нового функционала и исправлением ошибок в коде.
+        Во-вторых, что наиболее важно, над современными IT-проектами ведут работу целые команды программистов. Возникает
+        необходимость возвращаться к более ранним версиям кода, выяснять, кем и когда были внесены те или иные
+        изменения.Хранение двух и более файлов с одинаковым названием в одном каталоге запрещено политикой файловой
+        системы. Ранее программисты помещали различные версии одних и тех же файлов в отдельные каталоги, что вызывало
+        серьезные неудобства и приводило к неразберихе. Системы контроля версий (VCS) обеспечивают удобный способ
+        хранения нескольких версий одного и того же документа, позволяют просто и быстро определить любые внесенные
+        изменения, а также автора данных изменений. Они широко применяются как в области IT-проектов, так и в САПР.
+        GIT является одной из наиболее популярных VCS. Основными конкурентами данного программного продукта являются
+        Mercurial, Team Foundation Server, SVN и прочие.
+      </p>
+      <h3 class="info__subtitle">Причины работать с Git</h3>
+      <ol class="info__list">
+        <li>
+          Легко масштабировать работу по проекту, легко включать в процесс нужных сотрудников. При грамотном ведении
+          репозитория в кратчайшие сроки можно развернуть дополнительную площадку или удалить лишнего разработчика из
+          проекта.
+        </li>
+        <li>
+          Проект легко передавать из команды в команду, от разработчика к разработчику: просто отправьте ссылку на
+          репозиторий.
+        </li>
+        <li>
+          Ничего не теряется. Все версии файлов сохраняются, и ситуаций, при которой может «потеряться» безвозвратно та
+          или иная разработка, не бывает.
+        </li>
+        <li>
+          Можно «распараллелить» работу между разработчиками и целыми командами: распределите нагрузки между
+          сотрудниками
+          – так вы значительно повысите скорость выполнения проектных работ.
+        </li>
+        <li>
+          Можно отслеживать, как идет работа, логирует ее, и в любой момент можно увидеть, кто и когда внес изменения.
+        </li>
+      </ol>
+    </article>
+    <aside class="sidebar-right">
+      <p class="sidebar__text">Aside type 2</p>
+    </aside>
+  </main>
+  <footer class="footer">
+    <div class="footer__copyright">&copy; Copyright 2017</div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-item-link" href="#">Twitter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item-link" href="#">VKontakte</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item-link" href="#">Facebook</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>
